@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NEON CITY 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head><body>
+<canvas id="c"></canvas>
+
+<div class="scr on" id="menu">
+<h1>NEON<br>CITY 3D</h1><p>Versión 0.1: explora la ciudad y recoge monedas.</p>
+<button class="p" id="bPlay">JUGAR</button>
+<button id="bMp">MULTIJUGADOR</button>
+<button id="bCh">PERSONAJES</button>
+<button id="bSe">AJUSTES</button>
+</div>
+
+<div class="scr" id="chars"><h2>Elige personaje</h2><div class="g" id="grid"></div><button class="p" id="bChOk">LISTO</button></div>
+
+<div class="scr" id="mp"><h2>Multijugador</h2><p id="mps">Elige un nombre y crea una sala o únete con el código.</p>
+<input id="nm" maxlength="12" placeholder="Tu nombre"><input id="rc" maxlength="4" placeholder="Código de sala">
+<button class="p" id="bHost">CREAR SALA</button><button id="bJoin">UNIRSE</button><button id="bLeave">SALIR DE LA SALA</button><button id="bMpOk">VOLVER</button></div>
+
+<div class="scr" id="set"><h2>Ajustes</h2>
+<p>Sensibilidad de la cámara</p><input type="range" id="sens" min="0.4" max="2" step="0.1" value="1">
+<button id="bReset">Reiniciar monedas</button><button id="bSeOk">VOLVER</button></div>
+
+<div class="scr" id="pause"><h2>Pausa</h2><button class="p" id="bCont">CONTINUAR</button><button id="bExit">MENÚ PRINCIPAL</button></div>
+
+<div id="hud">
+<div id="hi"></div><canvas id="mm" width="110" height="110"></canvas>
+<button id="bp">PAUSA</button>
+<div id="joy"><div id="knob"></div></div>
+<button class="a" id="bj">SALTAR</button><button class="a" id="br">CORRER</button><button class="a" id="bi">HABLAR</button>
+</div>
+<div id="t"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="scripts/game.js"></script>
+</body></html>
